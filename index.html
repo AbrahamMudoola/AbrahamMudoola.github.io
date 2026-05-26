@@ -519,25 +519,36 @@
         <img class="main-img" src="assets/images/video-3.mov.png" alt="Autonomous Lane-Following Robot" />
       </div>
       <div class="project-content">
-        <p class="proj-num">03 &mdash; Autonomous Systems</p>
+        <p class="proj-num">03 &mdash; Autonomous Systems / ROS</p>
         <h2 class="proj-title">Autonomous<br />Lane-Following<br />Robot</h2>
         <p class="proj-desc">
-          Duckiebot platform with an NVIDIA Jetson Nano running onboard. The robot navigates
-          autonomously within a lane using a computer vision pipeline built in OpenCV — edge
-          detection and perspective transforms identify lane boundaries in real time.
+          Duckiebot platform with an NVIDIA Jetson Nano running onboard. All software is built
+          as Dockerized ROS nodes, developed across three labs for UML EECE 5560.
         </p>
         <p class="proj-desc">
-          Steering is handled by a PID controller with odometry feedback, keeping the robot
-          centered in lane through curves and straightaways without any manual input.
+          Lane detection uses a computer vision pipeline in OpenCV: frames from the compressed
+          camera feed are converted to HSV, then color-masked separately for white and yellow
+          lane boundaries. Canny edge detection is applied, followed by probabilistic Hough
+          Transform (HoughLinesP) to extract lane lines. Detected lines are published as
+          debug image topics for visualization.
+        </p>
+        <p class="proj-desc">
+          AprilTag-based navigation is handled by two independent PID controllers — one for
+          rotational alignment (centering the tag in frame) and one for distance approach —
+          feeding velocity and omega commands directly to the lane controller node. FSM state
+          integration ensures the robot only acts when in lane-following mode.
         </p>
         <div class="proj-tags">
-          <span class="tag">Autonomous Systems</span>
+          <span class="tag">ROS</span>
           <span class="tag">OpenCV</span>
           <span class="tag">NVIDIA Jetson Nano</span>
-          <span class="tag">PID Control</span>
-          <span class="tag">Odometry</span>
-          <span class="tag">Computer Vision</span>
+          <span class="tag">Dual PID Control</span>
+          <span class="tag">AprilTag Detection</span>
+          <span class="tag">Hough Transform</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Duckiebot</span>
         </div>
+        <a href="https://github.com/24Alex2/abraham-alex-lab" target="_blank" rel="noopener" style="display:inline-block; margin-top:1.5rem; font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--black); text-decoration:none; border-bottom:1px solid var(--black); padding-bottom:2px;">View Code on GitHub &rarr;</a>
       </div>
     </div>
   </div>
