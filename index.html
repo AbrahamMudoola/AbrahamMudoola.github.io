@@ -689,6 +689,43 @@
     </div>
   </div>
 
+  <!-- 06 RRT Path Planning -->
+  <div class="project">
+    <div class="project-inner flip">
+      <div class="project-images" style="display:flex; align-items:center; justify-content:center; background:#0d1117; aspect-ratio:4/3; flex:0 0 32%;">
+        <span style="font-size:2.2rem; line-height:1.1; font-weight:900; letter-spacing:-0.04em; color:rgba(255,255,255,0.1); text-transform:uppercase; text-align:center; padding:1.5rem;">RRT<br/>Path<br/>Plan</span>
+      </div>
+      <div class="project-content">
+        <p class="proj-num">06 &mdash; Software / Mobile Robotics</p>
+        <h2 class="proj-title">RRT Path<br />Planning &amp;<br />Obstacle<br />Avoidance</h2>
+        <p class="proj-desc">
+          Implemented the Rapidly-exploring Random Tree (RRT) algorithm from scratch in ROS 2
+          to navigate a TurtleBot3 to a goal while avoiding dynamic obstacles in Gazebo. Built as
+          part of COMP.4500: Mobile Robotics I at UMass Lowell.
+        </p>
+        <p class="proj-desc">
+          The planner subscribes to LIDAR scan data and builds a live 2D occupancy grid, marking
+          obstacles with a buffered radius to account for robot geometry. The RRT tree expands
+          through free space with collision checking at each step, extracts the optimal path, and
+          publishes waypoints. A separate proportional-control node follows those waypoints — and
+          when a new obstacle appears mid-route, the planner replans in real time and the robot
+          resumes on the updated path. The full tree, path, and obstacle map are visualized live
+          in RViz.
+        </p>
+        <div class="proj-tags">
+          <span class="tag">RRT</span>
+          <span class="tag">Path Planning</span>
+          <span class="tag">ROS 2</span>
+          <span class="tag">LIDAR</span>
+          <span class="tag">Occupancy Grid</span>
+          <span class="tag">Proportional Control</span>
+          <span class="tag">Gazebo</span>
+          <span class="tag">RViz</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="spacer"></div>
 
   <!-- ABOUT -->
