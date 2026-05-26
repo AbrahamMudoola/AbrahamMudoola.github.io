@@ -463,27 +463,19 @@
       </div>
       <div class="project-content">
         <p class="proj-num">01 &mdash; Electromechanical Build</p>
-        <h2 class="proj-title">Skee-Ball<br />Arcade<br />Machine</h2>
+        <h2 class="proj-title">Tabletop<br />Skee-Ball<br />Machine</h2>
         <p class="proj-desc">
-          Designed and built a fully functional Skee-Ball arcade machine from scratch.
-          Features a custom ramp, individually addressable LED scoring rings, a Sonic the
-          Hedgehog themed backboard, and a hand-wired electronics harness with scoring logic.
+          Tabletop Skee-Ball machine with a laser-cut plywood chassis and a clear acrylic cover
+          to keep balls in play. Control logic runs on an Allen Bradley PLC — pneumatic actuators
+          drive the internal ball mechanism, LEDs handle scoring feedback, and physical buttons
+          manage user input. All ladder logic written in-house.
         </p>
         <div class="proj-tags">
-          <span class="tag">Mechanical Design</span>
-          <span class="tag">Electronics</span>
-          <span class="tag">LED Control</span>
-          <span class="tag">Arduino</span>
-        </div>
-        <div class="proj-details">
-          <div>
-            <div class="detail-label">Features</div>
-            <div class="detail-val">LED Rings, Scoring System</div>
-          </div>
-          <div>
-            <div class="detail-label">Build Type</div>
-            <div class="detail-val">Full custom fabrication</div>
-          </div>
+          <span class="tag">PLC</span>
+          <span class="tag">Ladder Logic</span>
+          <span class="tag">Laser Cutting</span>
+          <span class="tag">Pneumatics</span>
+          <span class="tag">Wiring</span>
         </div>
       </div>
     </div>
@@ -491,11 +483,11 @@
 
   <div class="spacer"></div>
 
-  <!-- 02 Pick & Place Robot -->
+  <!-- 02 Autonomous Plant Mover Robot -->
   <div class="project">
     <div class="project-inner flip">
       <div class="project-images">
-        <img class="main-img" id="robot-main" src="assets/images/robot-1.jpg" alt="Autonomous robot" />
+        <img class="main-img" id="robot-main" src="assets/images/robot-1.jpg" alt="Autonomous Plant Mover Robot" />
         <div class="thumbs">
           <button class="active" onclick="swap('robot-main',this,'assets/images/robot-1.jpg')">
             <img src="assets/images/robot-1.jpg" alt="" />
@@ -506,67 +498,36 @@
           <button onclick="swap('robot-main',this,'assets/images/robot-3.jpg')">
             <img src="assets/images/robot-3.jpg" alt="" />
           </button>
+          <button onclick="swap('robot-main',this,'assets/images/robot-vision.jpg')">
+            <img src="assets/images/robot-vision.jpg" alt="" />
+          </button>
         </div>
       </div>
       <div class="project-content">
-        <p class="proj-num">02 &mdash; Robotics / Mechatronics</p>
-        <h2 class="proj-title">Pick &amp;<br />Place<br />Robot</h2>
+        <p class="proj-num">02 &mdash; Robotics / Computer Vision</p>
+        <h2 class="proj-title">Autonomous<br />Plant Mover<br />Robot</h2>
         <p class="proj-desc">
-          3D-printed mobile robot with a rack-and-pinion gripper, honeycomb-lattice chassis
-          for weight reduction, integrated camera, and servo-driven fork arms. Designed fully
-          in CAD, printed, and assembled.
+          A robot designed to move houseplants toward better light as the sun shifts across a room.
+          Built on a KIPR Wombat platform with a parallel gripper and full robot body designed from
+          the ground up.
+        </p>
+        <p class="proj-desc">
+          Vision is handled through color-based object detection — a lightweight approach suited to
+          the Wombat's limited processing. The system tracks objects, centers them in frame, and uses
+          the distance between two reference points as a proxy for depth. Light sensors measure ambient
+          levels to determine when and where to move. The control software ties it together: detect
+          the pot, align, grip, navigate, place.
+        </p>
+        <p class="proj-desc">
+          Gripper actuation uses a servo motor; locomotion uses DC motors.
         </p>
         <div class="proj-tags">
-          <span class="tag">3D Printing</span>
-          <span class="tag">CAD</span>
           <span class="tag">Robotics</span>
-          <span class="tag">Mechatronics</span>
-        </div>
-        <div class="proj-details">
-          <div>
-            <div class="detail-label">Chassis</div>
-            <div class="detail-val">Honeycomb lattice, FDM printed</div>
-          </div>
-          <div>
-            <div class="detail-label">Actuators</div>
-            <div class="detail-val">Servo motors, rack &amp; pinion</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="spacer"></div>
-
-  <!-- 03 Vision Robot -->
-  <div class="project">
-    <div class="project-inner">
-      <div class="project-images">
-        <img class="main-img" src="assets/images/robot-vision.jpg" alt="Vision robot" />
-      </div>
-      <div class="project-content">
-        <p class="proj-num">03 &mdash; Vision-Guided Automation</p>
-        <h2 class="proj-title">Computer<br />Vision<br />Robot</h2>
-        <p class="proj-desc">
-          Autonomous robot with onboard camera and real-time object detection. A touchscreen
-          displays live bounding boxes around detected targets with switchable Visual and
-          Manual operating modes.
-        </p>
-        <div class="proj-tags">
           <span class="tag">Computer Vision</span>
-          <span class="tag">Embedded Systems</span>
-          <span class="tag">Robotics</span>
-          <span class="tag">HMI</span>
-        </div>
-        <div class="proj-details">
-          <div>
-            <div class="detail-label">Interface</div>
-            <div class="detail-val">Touchscreen HMI</div>
-          </div>
-          <div>
-            <div class="detail-label">Detection</div>
-            <div class="detail-val">Color-based object targeting</div>
-          </div>
+          <span class="tag">CAD</span>
+          <span class="tag">Parallel Gripper</span>
+          <span class="tag">KIPR Wombat</span>
+          <span class="tag">Color Tracking</span>
         </div>
       </div>
     </div>
@@ -585,8 +546,8 @@
         </video>
         <div class="video-caption">
           <span class="vnum">Clip 01</span>
-          <h3>Pick &amp; Place Robot — Close Up</h3>
-          <p>Robot approaching and gripping a target object.</p>
+          <h3>Autonomous Plant Mover — Gripper v2</h3>
+          <p>An earlier build stage — gripper v2 prototype before the robot body was completed.</p>
         </div>
       </div>
 
@@ -609,8 +570,8 @@
         </div>
         <div class="video-caption">
           <span class="vnum">Clip 03</span>
-          <h3>Line-Following Robot</h3>
-          <p>Autonomous robot tracking a dashed course boundary.</p>
+          <h3>Autonomous Lane-Following Robot</h3>
+          <p>Duckiebot platform with an NVIDIA Jetson Nano running onboard. Lane detection uses edge detection and perspective transforms via OpenCV. A PID controller with odometry handles steering to keep the robot centered in lane.</p>
         </div>
       </div>
 
